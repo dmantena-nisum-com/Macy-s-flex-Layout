@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Arial;
+        }
+
+        /* Center website */
+
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 50px;
+            word-break: break-all;
+        }
+
+        .row {
+            padding: 8px;
+            display: flex;
+            margin: 10px -16px;
+            flex-flow: row wrap;
+        }
+
+        /* Adding padding BETWEEN each column */
+
+        .row>.column {
+            padding: 8px;
+        }
+
+
+
+        .column {
+
+            display: none;
+            /* Hide all elements by default , once the filter button is clicked display will show up with desired output*/
+        }
+
+
+
+
+
+        /* Content */
+
+        .content {
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 2px 2px #ccc;
+            border: 1px solid #eee;
+        }
+
+        /* The "show" class is added to the filtered elements */
+
+        .show {
+            display: block;
+        }
+
+        /* Styling buttons */
+
+        .btn {
+            box-shadow: 0 2px 2px #ccc;
+            border: 1px solid #ddd;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        .btn.active {
+            background-color: #666;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MAIN (Center website) -->
+    <div class="main">
+        <img src="logo.jpeg" alt="kidsWear" style="width:100%; height : 2% ">
+
+        <hr>
+
+        <h2>DHEERAJ-MACY'S FLEX PORTFOLIO</h2>
+
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn " onclick="filterSelection('kids')"> Kids</button>
+            <button class="btn" onclick="filterSelection('Mens')"> Mens</button>
+            <button class="btn" onclick="filterSelection('womens')"> Womens</button>
+        </div>
+
+        <!-- Portfolio Gallery -->
+        <div class="row">
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids1.jpeg" alt="kidsWear">
+                    <h4>BOY</h4>
+                    <p>Lorem ipsum dolor.. </p>
+                </div>
+            </div>
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids2.jpeg" alt="kidsWear">
+                    <h4>BOY</h4>
+                    <p>Lorem ipsum dolor.. </p>
+                </div>
+            </div>
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids11.jpeg" alt="kidsWear">
+                    <h4>BOY</h4>
+                    <p>Lorem ipsum dolor.. </p>
+                </div>
+            </div>
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids12.jpeg" alt="kidsWear">
+                    <h4>BOY</h4>
+                    <p>Lorem ipsum dolor.. </p>
+                </div>
+            </div>
+
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids7.jpeg" alt="kidsWear">
+                    <h4>BOY</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids5.jpeg" alt="kidsWear">
+                    <h4>BOY</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids3.jpeg" alt="kidsWear">
+                    <h4>Girl</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids4.jpeg" alt="kidsWear">
+                    <h4>Girl</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids6.jpeg" alt="kidsWear">
+                    <h4>GIRL</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids8.jpeg" alt="kidsWear">
+                    <h4>GIRL</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids9.jpeg" alt="kidsWear">
+                    <h4>GIRL</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column kids">
+                <div class="content">
+                    <img src="Kids10.jpeg" alt="kidsWear">
+                    <h4>GIRL</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men1.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men2.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men3.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men4.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men5.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men6.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men7.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men8.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men9.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men10.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men11.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column Mens">
+                <div class="content">
+                    <img src="Men12.jpeg" alt="Men's Wear">
+                    <h4>MEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+
+
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women1.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women2.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women3.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women4.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women5.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women6.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women7.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women8.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women9.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women10.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women11.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column womens">
+                <div class="content">
+                    <img src="Women12.jpeg" alt="Women's Wear">
+                    <h4>WOMEN</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+
+            <!-- END content-->
+        </div>
+
+        <!-- END MAIN -->
+    </div>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+            }
+        }
+
+        function AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+
+        // here i am adding  active class to the current button (to highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
