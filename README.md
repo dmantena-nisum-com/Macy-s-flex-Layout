@@ -1,7 +1,6 @@
 # Macy's-Flex-Layout
 Project using Css Flex Layout
 
-# NISUM-HTML-SKELETON
 [![Build status](https://api.travis-ci.org/Polymer/pwa-starter-kit.svg?branch=master)](https://travis-ci.org/Polymer/pwa-starter-kit)
 > ## 🛠 Status: In Development
 
